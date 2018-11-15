@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Natalie Kustovol](https://up.htmlacademy.ru/htmlcss/23/user/799907).
-* Наставник: `Неизвестно`.
+* Наставник: [Irina Malinovskaya](https://htmlacademy.ru/profile/irina-malinovskaya).
 
 ---
 
