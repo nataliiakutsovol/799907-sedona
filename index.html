@@ -27,12 +27,74 @@
       <section class="features">
         <h2>Седона - небольшой городок в Аризоне, заслужевающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньйон!<p>
+          <div class="feature-1">
+            <h3>Настоящий городок</h3>
+              <p> - №1 - </p>
+              <p>Седона - не атракцион для туристов, там течет своя жизнь</p>
+              <!--изображение-->
+
+              <div class="feature-1-housing">
+                <!--лого -->
+                <h3>Жилье</h3>
+                  <p>Рекомендуем пожить в настоящем мотеле, как в кино!</p>
+              </div>
+              <div class="feature-1-food">
+                <!--лого -->
+                <h3>Еда</h3>
+                  <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </div>
+              <div class="feature-1-souvenirs">
+                <!--лого -->
+                <h3>Сувениры</h3>
+                  <p>Не только китайского, но и местного производства!</p>
+              </div>
+          </div>
+          <div class="feature-2">
+            <!--изображение-->
+            <h3>Там есть мост дьявола</h3>
+              <p> - №2 - </p>
+              <p>Да, по нему можно пройти! Если вы конечно осмелитесь</p>
+          </div>
+          <div class="feature-3">
+            <h3>Небольшая площадь</h3>
+              <p> - №3 - </p>
+              <p>Все достопримечательности находятся очень близко</p>
+          </div>
+          <div class="feature-4">
+            <h3>Красвая дорога</h3>
+              <p> - №4 - </p>
+              <p>Ехать в Седону из Лас-Вегаса совсем не скучно</p>
+          </div>
+          <div class="feature-5">
+            <h3>Мало туристов</h3>
+              <p> - №5 - </p>
+              <p>Большенство едет в Гранд Каньйон и толпится там</p>
+          </div>
       </section>
       <section class="order">
          <h2>Заинтересовались?</h2>
          <p>Укажите даты предпологаемой поездки, и мы покажем вам лучшие предложение гостиниц в Седоне</p>
+         <form class="appointment-form" method="post" action="https://echo.htmlacademy.ru">
+           <h4>Поиск гостиницы в Седоне</h4>
+           <p class="appointment-item">
+            <label for="appointment-date-in">Дата заезда</label>
+            <input id="appointment-date-in" type="text" name="date" value="" placeholder="24 апреля 2017">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-date-out">Дата выезда</label>
+            <input id="appointment-date-out" type="text" name="date" value="" placeholder="4 июля 2017">
+          </p>
+          <p class="appointment-item">
+            <label for="quantityr">Взрослые: 2 </label>
+            <input type="number" name="quantity" min="0" max="10">
+          </p>
+          <p class="appointment-item">
+            <label for="quantity">Дети: 0 </label>
+            <input type="number" name="quantity" min="0" max="10">
+          </p>
+          <button class="submit">Найти</button>
+         </form>
       </section>
-
     </main>
     <footer class="main-footer">
       <p>#Visitsedona</p>

@@ -20,6 +20,59 @@
      </nav>
     </header>
     <main class="main-container">
+      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="pool" id="filter-pool" checked>
+                  <label for="filter-pool">Бессейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking" id="filter-parking">
+                  <label for="filter-parking">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                  <label for="filter-wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                  <label for="filter-hotel">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" id="filter-motel" checked>
+                  <label for="filter-motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="apartments" id="filter-apartments">
+                  <label for="filter-apartments">Апартаменты</label>
+              </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Стоимость в сутки (Р):</legend>
+            <button type="button">От 0</button>
+            <input type="range" name="points" min="0" max="3000">
+            <button type="button">До 3000</button>
+            <!--в этом блоке окончательно запуталась, без Вас не справлюсь -->
+        </fieldset>
+        <button type="submit">Показать</button>
+        <fieldset>
+          <h3>Найдено: 3</h3>
+          <ul class="button-filter">
+            <li><p>Сортировка:</p></li>
+            <li><button class="button-filter-price">По цене</button></li>
+            <li><button class="button-filter-type">По типу</button></li>
+            <li><button class="button-filter-rating">По рейтингу</button></li>
+          </ul>
+        </fieldset>
+      </form>
       <section class="hotel">
         <h2 class="visually-hidden">Список гостиниц</h2>
           <ul class="hotel-list">
@@ -91,7 +144,7 @@
               </p>
             </div>
               <p class="card-rating">
-                <span class="card-rating-value">9</span>
+                <span class="card-rating-value">2</span>
                 <b class="card-rating-rank">Рейтинг:9,2</b>
               </p>
             </li>
