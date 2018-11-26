@@ -28,33 +28,45 @@
         <h2>Седона - небольшой городок в Аризоне, заслужевающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньйон!<p>
           <div class="feature">
+            <div class="feature-text">
             <h3>Настоящий городок</h3>
               <p> - №1 - </p>
               <p>Седона - не атракцион для туристов, там течет своя жизнь</p>
+            </div>
               <!--изображение-->
            </div>
+             <div class="feature-more">
               <div class="feature-housing">
                 <!--лого -->
+               <div class="feature-text">
                 <h3>Жилье</h3>
                   <p>Рекомендуем пожить в настоящем мотеле, как в кино!</p>
+               </div>
               </div>
               <div class="feature-food">
                 <!--лого -->
+               <div class="feature-text">
                 <h3>Еда</h3>
                   <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+               </div>
               </div>
               <div class="feature-souvenirs">
                 <!--лого -->
+               <div class="feature-text">
                 <h3>Сувениры</h3>
                   <p>Не только китайского, но и местного производства!</p>
               </div>
-
+            </div>
+          </div>
           <div class="feature">
             <!--изображение-->
+            <div class="feature-text">
             <h3>Там есть мост дьявола</h3>
               <p> - №2 - </p>
               <p>Да, по нему можно пройти! Если вы конечно осмелитесь</p>
+            </div>
           </div>
+         <div class="features-other">
           <div class="feature">
             <h3>Небольшая площадь</h3>
               <p> - №3 - </p>
@@ -70,12 +82,14 @@
               <p> - №5 - </p>
               <p>Большенство едет в Гранд Каньйон и толпится там</p>
           </div>
+        </div>
       </section>
       <section class="order">
          <h2>Заинтересовались?</h2>
          <p>Укажите даты предпологаемой поездки, и мы покажем вам лучшие предложение гостиниц в Седоне</p>
-         <button class="button">Поиск гостиницы в Седоне</button>
+         <button class="button" type="button">Поиск гостиницы в Седоне</button>
          <form class="appointment-form" method="post" action="https://echo.htmlacademy.ru">
+         <div class="appointment">
            <div class="appointment-item">
             <label for="appointment-date-in">Дата заезда</label>
             <input id="appointment-date-in" type="text" name="date" value="" placeholder="24 апреля 2017">
@@ -84,15 +98,18 @@
             <label for="appointment-date-out">Дата выезда</label>
             <input id="appointment-date-out" type="text" name="date" value="" placeholder="4 июля 2017">
           </div>
+        </div>
+        <div class="appointment">
           <div class="appointment-item">
             <label for="quantity">Взрослые: 2 </label>
             <input type="number" id="quantity" name="quantity" min="0" max="10">
           </div>
           <div class="appointment-item">
             <label for="quantity">Дети: 0 </label>
-            <input type="number" id="quantity" name="quantity" min="0" max="10">
+            <input type="number" id="quantity" name="quantity" min="0" max="10"><!--эту строку валидатор выкидывает как ошибку, хотя еще вчера все было ок -->
           </div>
-          <button class="submit">Найти</button>
+        </div>
+          <button type="submit">Найти</button>
          </form>
       </section>
     </main>
@@ -104,7 +121,7 @@
           <li><a class="social-button" href="#"><span class="visually-hidden">Ютуб</span></a></li>
         </ul>
       <p class="footer-copyright">
-        <b>Разработано:</b>
+        <b>Website by</b>
         <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
       </p>
     </footer>
