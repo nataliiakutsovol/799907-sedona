@@ -109,7 +109,7 @@ background-color: #756357;
 .card-rating-rank  {
   background-color: #f1f1f1;
 }
-.appointment-form form {
+form .appointment-form {
   display: none;
 }
 .main-footer {
