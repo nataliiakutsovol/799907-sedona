@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -31,43 +30,39 @@ body {
   background-color: #ffffff;
   flex-direction: row;
 }
-.site-navigation{
+.site-navigation {
   list-style: none;
   margin: 0;
   padding: 0 70px;
 }
-
 a {
   text-decoration: none;
 }
-.site-navigation a{
+.site-navigation a {
   color: #000000;
 }
- .site-navigation a:hover{
- color: rgb(129,179,210);
+ .site-navigation a:hover {
+   color: rgb(129,179,210);
 }
 
 .site-navigation a:focus {
- color: rgb(118,99,87);
+  color: rgb(118,99,87);
 }
 .site-navigation a:active {
- color: #f1f1f1;
+  color: #f1f1f1;
 }
-
-main {
-  background-image: url("img/background-photo.jpg");
+.promo {
+  background-image: url("../img/background-photo.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 1280px 640px;
+  background-size: 1280px 800px;
+  padding-top: 76px;
 }
-.promo div {
+.promo-image {
   text-align: center;
-  margin-top: 76px;
 }
 .feature-text-promo {
   background-color: #ffffff;
-  margin: 0;
-  padding: 0;
 }
 .features h3 {
   font-size: 21px;
@@ -75,7 +70,8 @@ main {
   font-weight: bold;
   text-align: center;
 }
-.features p, span {
+.features p,
+.features span {
   font-size: 14px;
   line-height: 26px;
   color: #604e43;
@@ -93,6 +89,12 @@ main {
   display: flex;
   margin: 0;
 }
+.feature-image {
+  background-image: url("../img/img/layer-10.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 800px 256px;
+}
 .feature-more,
 .features-other {
   display: flex;
@@ -105,7 +107,7 @@ main {
 .hotel-list {
   list-style: none;
 }
-.hotel-item{
+.hotel-item {
   display: flex;
 }
 .hotel-item-card a {
@@ -114,11 +116,11 @@ main {
   font-weight: bold;
   color: #000000;
 }
-.hotel-item-card a:hover{
- color: rgb(129,179,210);
+.hotel-item-card a:hover {
+  color: rgb(129,179,210);
 }
 .hotel-item-card a:focus {
- color: #f1f1f1;
+  color: #f1f1f1;
 }
 .hotel-item-type b,
 .card-rating-rank {
@@ -136,10 +138,10 @@ main {
   color: #ffffff;
 }
 .button-book {
-background-color: #756357;
+  background-color: #756357;
 }
 .button-more {
-background-color: rgb(129,179,210);
+  background-color: rgb(129,179,210);
 }
 .hotel-item-button-more a:hover {
   background-color: #669dc0;
@@ -160,7 +162,7 @@ background-color: rgb(129,179,210);
 .card-rating {
   justify-content: flex-end;
 }
-.card-rating-rank  {
+.card-rating-rank {
   background-color: #f1f1f1;
 }
 .appointment-form {
