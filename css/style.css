@@ -11,21 +11,26 @@ body {
 }
 .container {
   background-color: #ffffff;
-  width: auto;
+  width: 1280px;
   margin: 0 40px;
+}
+.header {
+  position: relative;
+}
+.main-header-logo {
+  position: absolute;
+  top: 0;
+  left: 45%;
 }
 .main-navigation .site-navigation {
   display: flex;
   justify-content: space-between;
 }
-.main-header-logo {
-  order: 3;
-}
 .main-navigation {
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
-  color:  #000000;
+  color: #000000;
   text-align: center;
   background-color: #ffffff;
   flex-direction: row;
@@ -33,7 +38,7 @@ body {
 .site-navigation {
   list-style: none;
   margin: 0;
-  padding: 0 70px;
+  padding: 17px 70px;
 }
 a {
   text-decoration: none;
@@ -57,12 +62,26 @@ a {
   background-repeat: no-repeat;
   background-size: 1280px 800px;
   padding-top: 76px;
+  margin-top: -63px;
 }
 .promo-image {
   text-align: center;
 }
 .feature-text-promo {
   background-color: #ffffff;
+}
+.feature-text-promo {
+  position: relative;
+}
+.feature-text-promo h3::before {
+  content: '';
+  position: absolute;
+}
+.feature-text-promo::before {
+  background-image: url("../img/svg-sedona/intro-mask.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 1280px 56px;
 }
 .features h3 {
   font-size: 21px;
@@ -81,19 +100,15 @@ a {
   color: #ffffff;
   text-align: center;
 }
-.feature div {
+.feature {
   background-color: rgb(129,179,210);
   color: #ffffff;
-}
-.feature {
   display: flex;
-  margin: 0;
+  min-height: 256px;
 }
-.feature-image {
-  background-image: url("../img/img/layer-10.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 800px 256px;
+.feature-text,
+.feature img {
+  height: 100%;
 }
 .feature-more,
 .features-other {
@@ -101,8 +116,29 @@ a {
   margin: 60px 70px 86px;
   text-align: center;
 }
+.feature-more h3 {
+  position: relative;
+}
+.feature-more h3::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
+.feature-housing h3::before {
+  background-image: url("../img/svg-sedona/icon-2.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+}
 .order {
   text-align: center;
+}
+.filter {
+background-image: url("../img/filter-background.jpg");
+background-position: top center;
+background-repeat: no-repeat;
+background-size: 1280px 800px;
 }
 .hotel-list {
   list-style: none;
@@ -139,9 +175,12 @@ a {
 }
 .button-book {
   background-color: #756357;
+  padding: 7px 17px;
 }
 .button-more {
   background-color: rgb(129,179,210);
+  margin-right: 5px;
+  padding: 7px 17px;
 }
 .hotel-item-button-more a:hover {
   background-color: #669dc0;
@@ -164,6 +203,7 @@ a {
 }
 .card-rating-rank {
   background-color: #f1f1f1;
+  padding: 7px 17px;
 }
 .appointment-form {
   display: none;
@@ -182,4 +222,7 @@ a {
 }
 .social-button {
   color: #ffffff;
+}
+.visually-hidden {
+  visibility: hidden;
 }
