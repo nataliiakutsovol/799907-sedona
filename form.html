@@ -1,0 +1,25 @@
+<link href="https://fonts.google.com/?query=pt+san&selection.family=PT+Sans/PT+Sans+Narrow" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<form class="appointment-form" method="post" action="https://echo.htmlacademy.ru">
+  <div class="appointment-item">
+    <label for="appointment-date-in">Дата заезда</label>
+    <input id="appointment-date-in" type="text" name="date" value="" placeholder="24 апреля 2017">
+  </div>
+  <div class="appointment-item">
+    <label for="appointment-date-out">Дата выезда</label>
+    <input id="appointment-date-out" type="text" name="date" value="" placeholder="4 июля 2017">
+  </div>
+  <div class="appointment">
+    <div class="appointment-item">
+      <label for="quantity">Взрослые: 2 </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="10">
+    </div>
+    <div class="appointment-item">
+      <label for="quantity">Дети: 0 </label>
+      <input type="number" id="quantity" name="quantity" min="0" max="10"><!--эту строку валидатор выкидывает как ошибку, хотя еще вчера все было ок -->
+    </div>
+  </div>
+  <button class="button-search" type="submit">Найти</button>
+</form>
+</body>
+</html>

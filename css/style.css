@@ -52,16 +52,16 @@ a {
 }
 
 .site-navigation a:focus {
-  color: rgb(118,99,87);
+  color: rgb(0,0,0);
 }
 .site-navigation a:active {
-  color: #f1f1f1;
+  color: rgb(0,0,0);
 }
 .promo {
   background-image: url("../img/background-photo.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 1280px 800px;
+  background-size: cover;
   padding-top: 76px;
   padding-bottom: 87px;
 }
@@ -105,6 +105,10 @@ a {
 .feature p {
   color: #ffffff;
   text-align: center;
+  padding: 0 30px;
+}
+.feature h3 {
+  margin-top: 0;
 }
 .feature {
   background-color: rgb(129,179,210);
@@ -123,8 +127,16 @@ a {
 .feature-more,
 .features-other {
   display: flex;
-  margin: 60px 70px 86px;
+  margin: 60px;
   text-align: center;
+}
+.feature-housing p,
+.feature-souvenirs p {
+  padding: 0 20px;
+}
+.feature-food p {
+  padding: 0 30px;
+  margin-left: 10px;
 }
 .feature-more h3 {
   position: relative;
@@ -164,11 +176,95 @@ a {
 .order {
   text-align: center;
 }
+.button-search-hotel {
+  display: inline-block;
+  background-color: #756357;
+  color: #ffffff;
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  width: 566px;
+  padding: 30px 0;
+  font-size: 16px;
+  line-height: 26px;
+}
+.appointment-form {
+  display: flex;
+  width: 566px;
+  flex-wrap: wrap;
+  padding: 53px;
+  border: 1px solid black;
+  color: #000000;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+ .appointment-items input,
+ .appointment input {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 10px;
+  padding-right: 0;
+  background-color: #f1f1f1;
+}
+.appointment-items input[type="text"] + span {
+  background-image: url("../img/svg-sedona/calendar.svd");
+  background-size: 5px 5px;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+}
+.appointment {
+  display: flex;
+  justify-content: space-between;
+}
+.appointment-items input {
+  width: 320px;
+}
+.appointment input {
+  width: 113px;
+  margin-right: 20px;
+}
+.appointment-items label {
+  margin-bottom: 9px;
+  margin-right: 18px;
+  position: relative;
+}
+.appointment-items label:last-child {
+  margin-right: 15px;
+}
+.appointment-item {
+ margin-bottom: 53px;
+}
+.appointment-item label {
+  margin-right: 25px;
+  margin-left: 10px;
+}
+.button-search {
+  display: inline-block;
+  background-color: rgb(129,179,210);
+  color: #ffffff;
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border: none;
+  width: 457px;
+  padding: 15px 0;
+  font-size: 16px;
+  line-height: 26px;
+}
 .filter {
   background-image: url("../img/filter-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 1280px 800px;
+  background-size: cover;
+  padding-top: 28px;
 }
 form {
   display: flex;
@@ -177,6 +273,9 @@ form {
 }
 .filter ul {
   list-style: none;
+}
+.filter li {
+  padding-bottom: 20px;
 }
 .filter-range {
   width: 330px;
@@ -187,6 +286,9 @@ legend {
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
+}
+fieldset {
+  border: none;
 }
 .price-controls {
   position: relative;
@@ -276,6 +378,50 @@ legend {
   color: #000000;
   background: #ffffff;
 }
+.button-filter-sort {
+  display: flex;
+  margin: 0;
+  vertical-align: top;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.button-filter,
+.button-sort {
+  list-style: none;
+  display: flex;
+}
+.button-filter li {
+  margin-right: 32px;
+}
+.button-filter a {
+  text-decoration: none;
+}
+.button-filter a:hover {
+  color: rgb(129,179,210);
+}
+.button-filter a:focus {
+  color: #f1f1f1;
+    border-bottom: 1px dotted rgb(129,179,210);
+}
+.button-sort {
+  justify-content: flex-end;
+}
+.button-sort-up,
+ .button-sort-down {
+  opacity: 0.5;
+  padding-right: 15px;
+}
+.button-sort-up:hover,
+.button-sort-down:hover {
+  opacity: 1;
+}
+.copyright-button:hover path,
+.button-sort-up:focus path,
+.button-sort-up:active path,
+.button-sort-down:focus path,
+.button-sort-down:active path {
+  fill: rgb(129,179,210);
+}
 .hotel-list {
   list-style: none;
 }
@@ -284,6 +430,7 @@ legend {
 }
 .hotel-item-card {
   margin-top: -8px;
+  flex-grow: 8;
 }
 .hotel-item-card a {
   font-size: 21px;
@@ -291,6 +438,7 @@ legend {
   font-weight: bold;
   color: #000000;
 }
+.button-filter a:hover,
 .hotel-item-card a:hover {
   color: rgb(129,179,210);
 }
@@ -305,6 +453,7 @@ legend {
 }
 .hotel-item-buttons {
   display: flex;
+  box-sizing: border-box;
 }
 .hotel-item-buttons a {
   font-size: 14px;
@@ -321,34 +470,41 @@ legend {
   margin-right: 5px;
   padding: 7px 17px;
 }
+.button-search:hover,
 .social-button:hover,
 .hotel-item-button-more a:hover {
   background-color: #669dc0;
   color: #ffffff;
 }
+.button-search:active,
 .social-button:active,
 .hotel-item-button-more a:active {
   border-color: #669dc0;
   color: rgb(129,179,210);
 }
+.button-search-hotel:hover,
 .hotel-item-button-book a:hover {
   background-color: #604e43;
   color: #ffffff;
 }
+.button-search-hotel:active,
 .hotel-item-button-book a:active {
   border-color: #604e43;
   color:  #756357;
 }
 .card-rating {
-
-  justify-content: flex-end;
+  flex-grow: 1;
 }
 .card-rating-rank {
   background-color: #f1f1f1;
   padding: 7px 17px;
+  box-sizing: border-box;
 }
-.appointment-form {
-  display: none;
+.card-rating-value span {
+  background-image: url("../img/svg-sedona/star.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 17px 17px;
 }
 .main-footer {
   color: #000000;
@@ -356,13 +512,14 @@ legend {
   display: flex;
   justify-content: space-around;
   margin-left: 130px;
+  margin-top: 30px;
 }
 .footer-social {
   display: flex;
   justify-content: space-between;
   width: 151px;
   margin: 0 auto;
-  padding: 0;
+  padding-left: 190px;
   list-style: none;
 }
 .social-button {
@@ -387,6 +544,9 @@ legend {
   justify-content: center;
   width: 115px;
   height: 40px;
+}
+.copyright-button:active path {
+  fill: #f1f1f1;
 }
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
