@@ -22,6 +22,7 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 }
 .main-navigation .site-navigation {
   display: flex;
@@ -50,7 +51,6 @@ a {
  .site-navigation a:hover {
    color: rgb(129,179,210);
 }
-
 .site-navigation a:focus {
   color: rgb(0,0,0);
 }
@@ -65,6 +65,7 @@ a {
   padding-top: 76px;
   padding-bottom: 87px;
   position: relative;
+  z-index: 1;
 }
 .promo-image {
   text-align: center;
@@ -188,19 +189,38 @@ a {
   font-size: 16px;
   line-height: 26px;
 }
+.modal {
+  position: fixed;
+}
+/* не факт, что нам пригодится фиксированное позиционирование для формы, она ведь будет появляться пи клике кнопки
+(я это сделаю в следующем заходе, сейчас не осилила по вемени), но я просто попрактиковалась это делать */
 .appointment-form {
   display: flex;
-  width: 566px;
   flex-wrap: wrap;
-  padding: 53px;
-  border: 1px solid black;
-  color: #000000;
-  position: relative;
+  top: 120px;
   left: 50%;
   transform: translateX(-50%);
+  width: 566px;
+  padding: 53px 0;
+  border: 1px solid black;
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px #ebebeb;
   margin: 0;
-  padding-left: 0;
-  padding-right: 0;
+  z-index: 3;
+}
+input, button {
+  border:none;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  outline: inherit;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
  .appointment-items input,
  .appointment input {
@@ -210,38 +230,84 @@ a {
   padding-right: 0;
   background-color: #f1f1f1;
 }
-.appointment-items input[type="text"] + span {
-  background-image: url("../img/svg-sedona/calendar.svd");
-  background-size: 5px 5px;
+.appointment-items {
+  position: relative;
+}
+.appointment-items input[type="text"] {
+  width: 345px;
+}
+.appointment-items input:hover {
+  background-color: #ebebeb;
+}
+.appointment-items input:focus {
+background-color: #ffffff;
+border: 2px solid #e5e5e5;
+}
+/* С этим позиционированием накрутила, сама знаю, но привязать конкретно к полю не получаеться*/
+.appointment-date-button {
+  content: "";
   position: absolute;
-  left: -20px;
-  top: 50%;
+  width: 19px;
+  height: 20px;
+  top: 10%;
+  left: 92%;
+  opacity: 0.5;
+}
+.appointment input[type="number"] {
+  width: 114px;
+  margin-left: 10px;
+}
+.appointment-items label {
+  margin-bottom: 9px;
+  margin-right: 10px;
+  position: relative;
 }
 .appointment {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
-.appointment-items input {
-  width: 320px;
-}
-.appointment input {
-  width: 113px;
-  margin-right: 20px;
-}
-.appointment-items label {
-  margin-bottom: 9px;
-  margin-right: 18px;
+.appointment-item-adults {
+  display: flex;
+  justify-content: flex-start;
   position: relative;
+  width: 228px;
+  margin-left: 40px;
 }
-.appointment-items label:last-child {
-  margin-right: 15px;
+.appointment-item-adults label {
+  margin-right: 22px;
 }
-.appointment-item {
- margin-bottom: 53px;
+.appointment-item-children {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  width: 228px;
+  margin-right: 40px;
 }
-.appointment-item label {
-  margin-right: 25px;
-  margin-left: 10px;
+.appointment-quantity-down::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  background-color: #d0d0d0;
+  top: 25%;
+  left: 50%;
+}
+.appointment-quantity-up::before,
+.appointment-quantity-up::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 3px;
+  background-color: #d0d0d0;
+  top: 25%;
+  left: 90%;
+}
+.appointment-quantity-up::after {
+  transform: rotate(90deg);
+}
+.appointment-item input {
+  margin-left: 45px;
 }
 .button-search {
   display: inline-block;
@@ -380,8 +446,6 @@ fieldset {
   display: flex;
   margin: 0;
   vertical-align: top;
-  justify-content: space-between;
-  flex-direction: row;
 }
 .button-filter,
 .button-sort {
@@ -409,10 +473,13 @@ fieldset {
   opacity: 0.5;
   padding-right: 15px;
 }
+.appointment-quantity-down:hover::before,
+.appointment-date-button:hover,
 .button-sort-up:hover,
 .button-sort-down:hover {
   opacity: 1;
 }
+.appointment-date-button:active path,
 .copyright-button:hover path,
 .button-sort-up:focus path,
 .button-sort-up:active path,
@@ -428,7 +495,7 @@ fieldset {
 }
 .hotel-item-card {
   margin-top: -8px;
-  flex-grow: 8;
+  flex-grow: 2;
 }
 .hotel-item-card a {
   font-size: 21px;
@@ -449,8 +516,11 @@ fieldset {
   line-height: 21px;
   color: rgb(51,51,51);
 }
-.hotel-item-buttons {
+.hotel-item-type-button {
   display: flex;
+}
+.hotel-item-buttons {
+  display: block;
   box-sizing: border-box;
 }
 .hotel-item-buttons a {
@@ -491,18 +561,28 @@ fieldset {
   color:  #756357;
 }
 .card-rating {
-  flex-grow: 1;
+  display: block;
+  text-align: right;
 }
 .card-rating-rank {
   background-color: #f1f1f1;
   padding: 7px 17px;
   box-sizing: border-box;
+  margin-right: 70px;
 }
-.card-rating-value span {
+.card-rating-values {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 70px 42px 0;
+}
+.card-rating-value {
   background-image: url("../img/svg-sedona/star.svg");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 17px 17px;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
 }
 .main-footer {
   color: #000000;
