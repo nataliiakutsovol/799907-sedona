@@ -425,7 +425,7 @@ a {
   padding-top: 28px;
 }
 
-.form {
+form {
   display: flex;
   justify-content: space-around;
   color: #ffffff;
