@@ -11,7 +11,7 @@ body {
   background-color: #ffffff;
   width: 1200px;
   margin: 0 auto;
-  box-shadow: 0px 5px 15px rgba(0,1,1,0.2);
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .header {
@@ -230,13 +230,11 @@ a {
 .modal {
   display: none;
   position: fixed;
-
 }
 
 @keyframes bounce {
   0% {
     transform: translateY(-2000px);
-
   }
 
   70% {
@@ -263,7 +261,6 @@ a {
   background-color: transparent;
   border: 0;
 } */
-
 .appointment-form {
   flex-wrap: wrap;
   top: 120px;
@@ -278,7 +275,7 @@ a {
   z-index: 3;
 }
 
-.input, .button, .iframe {
+.input, .button {
   border: none;
   background-image: none;
   background-color: transparent;
@@ -308,8 +305,9 @@ a {
 }
 
 .appointment-items input {
-  width: 349px;
+  width: 345px;
   padding: 8px;
+  margin-left: -8px;
   box-sizing: border-box;
   border: 2px solid transparent;
 }
@@ -343,7 +341,12 @@ a {
 .appointment-items label {
   margin-bottom: 9px;
   margin-right: 10px;
+  margin-left: 3px;
   position: relative;
+}
+
+.appointment-items label:last-child {
+  margin-left: 2px;
 }
 
 .appointment {
@@ -352,25 +355,28 @@ a {
   margin-bottom: 30px;
 }
 
-.appointment-item-adults {
+.appointment-item-adults,
+.appointment-item-children {
   display: flex;
-  justify-content: flex-start;
   position: relative;
-  width: 238px;
+}
+
+.appointment-item-adults {
+  justify-content: flex-start;
+  width: 228px;
   margin-left: 40px;
 }
 
 .appointment-item-adults label {
-  margin-right: 22px;
+  margin-right: 18px;
 }
 
 .appointment-item-children {
-  display: flex;
   justify-content: flex-end;
-  position: relative;
   width: 228px;
   margin-right: 40px;
 }
+
 
 .appointment-quantity-down:before {
   content: "";
@@ -477,13 +483,15 @@ fieldset {
 .checkbox+label:before {
   content: '';
   position: absolute;
+  background: transparent;
+  background-image: url("../img/svg-sedona/checkbox-off.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
   top: -4px;
   left: 0;
   width: 21px;
   height: 21px;
-  background: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
 }
 
 .checkbox+label:after {
@@ -491,14 +499,13 @@ fieldset {
   position: absolute;
   top: -4px;
   left: 0;
-  width: 29.8px;
-  height: 23px;
+  width: 24px;
+  height: 21px;
   background: transparent;
 }
 
 .checkbox:checked+label:before {
   background: transparent;
-  border: 2px solid #ffffff;
 }
 
 .checkbox:checked+label:after {
@@ -626,15 +633,15 @@ fieldset {
 }
 
 .button-filter-sort h3 {
-font-size: 21px;
-line-height: 26px;
+  font-size: 21px;
+  line-height: 26px;
 }
+
 /* .button-filter,
 .button-sort {
   display: flex;
   border: 1px solid black;
 } */
-
 .button-filter {
   flex-grow: 1;
   margin-left: 75px;
@@ -645,6 +652,7 @@ line-height: 26px;
   margin-right: 32px;
   text-decoration: none;
 }
+
 .button-filter a:first-child {
   margin-left: 40px;
 }
@@ -666,6 +674,7 @@ line-height: 26px;
 .button-sort-down {
   opacity: 0.5;
   padding-right: 10px;
+  cursor: pointer;
 }
 
 .appointment-quantity-down:hover:before,
@@ -675,6 +684,7 @@ line-height: 26px;
   opacity: 1;
 }
 
+.social-button:active path,
 .appointment-date-button:active path,
 .copyright-button:hover path,
 .button-sort-up:focus path,
@@ -762,9 +772,8 @@ line-height: 26px;
 }
 
 .button-search:active,
-.social-button:active,
 .hotel-item-button-more a:active {
-  border-color: #669dc0;
+  background-color: #669dc0;
   color: rgb(129, 179, 210);
 }
 
@@ -853,7 +862,7 @@ line-height: 26px;
 }
 
 .copyright-button:active path {
-  fill: #f1f1f1;
+  fill: #bdbbbc;
 }
 
 .visually-hidden:not(:focus):not(:active),
