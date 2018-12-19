@@ -36,8 +36,8 @@ body {
   font-weight: bold;
   line-height: 26px;
   text-transform: uppercase;
-  color: #000000;
   text-align: center;
+  color: #000000;
   background-color: #ffffff;
   flex-direction: row;
 }
@@ -45,11 +45,23 @@ body {
 .site-navigation {
   list-style: none;
   margin: 0;
-  padding: 17px 70px;
+  padding: 15px 70px;
 }
 
 a {
   text-decoration: none;
+}
+
+.site-navigation li {
+  width: 240px;
+}
+
+.site-navigation li:nth-child(-n+2) {
+  text-align: left;
+}
+
+.site-navigation li:nth-child(n+3) {
+  text-align: right;
 }
 
 .site-navigation a {
@@ -101,7 +113,7 @@ a {
 }
 
 .promo:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -117,6 +129,7 @@ a {
 .features span {
   font-size: 14px;
   line-height: 26px;
+  font-weight: 500;
   color: #604e43;
   text-align: center;
   text-transform: uppercase;
@@ -130,6 +143,12 @@ a {
 
 .feature h3 {
   margin-top: 0;
+  margin-bottom: -20px;
+}
+
+.features-other h3 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .feature {
@@ -145,6 +164,10 @@ a {
   height: 100%;
 }
 
+.feature-text {
+  padding-bottom: 60px;
+}
+
 .feature figure {
   margin: 0;
 }
@@ -152,9 +175,13 @@ a {
 .feature-more,
 .features-other {
   display: flex;
-  padding: 60px;
+  padding-top: 60px;
   padding-bottom: 0;
   text-align: center;
+}
+
+.feature-more {
+  margin-bottom: -60px;
 }
 
 .feature-housing p,
@@ -171,7 +198,7 @@ a {
 }
 
 .feature-more h3:before {
-  content: '';
+  content: "";
   position: absolute;
   top: -25px;
   left: 50%;
@@ -207,24 +234,36 @@ a {
   padding: 0 90px 60px;
 }
 
+.features-other p {
+  padding: 0 50px;
+}
+
+.feature-road p {
+  padding: 5px;
+}
+
 .order {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
 }
 
 .button-search-hotel {
   display: inline-block;
+  vertical-align: middle;
   background-color: #756357;
   color: #ffffff;
-  font: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
   border: none;
   width: 566px;
   padding: 25px 0;
-  font-size: 16px;
-  line-height: 26px;
 }
 
 .modal {
@@ -268,6 +307,8 @@ a {
   transform: translateX(-50%);
   width: 566px;
   padding: 53px 0;
+  font-size: 14px;
+  font-weight: bold;
   color: #000000;
   background-color: #ffffff;
   box-shadow: 0 0 10px #708090;
@@ -321,14 +362,14 @@ a {
   border: 2px solid #e5e5e5;
 }
 
-/* С этим позиционированием накрутила, сама знаю, но привязать конкретно к полю не получаеться*/
 .appointment-date-button {
   content: "";
   position: absolute;
   width: 19px;
   height: 20px;
-  top: 10%;
-  left: 92%;
+  top: 6px;
+  right: 0;
+  transform: translateX(-50%);
   opacity: 0.5;
 }
 
@@ -340,13 +381,13 @@ a {
 
 .appointment-items label {
   margin-bottom: 9px;
-  margin-right: 10px;
+  margin-right: 22px;
   margin-left: 3px;
   position: relative;
 }
 
 .appointment-items label:last-child {
-  margin-left: 2px;
+  margin-left: 0;
 }
 
 .appointment {
@@ -368,7 +409,7 @@ a {
 }
 
 .appointment-item-adults label {
-  margin-right: 18px;
+  margin-right: 23px;
 }
 
 .appointment-item-children {
@@ -377,14 +418,13 @@ a {
   margin-right: 40px;
 }
 
-
 .appointment-quantity-down:before {
   content: "";
   position: absolute;
   width: 12px;
   height: 3px;
   background-color: #d0d0d0;
-  top: 25%;
+  top: 15px;
   left: 50%;
 }
 
@@ -395,12 +435,13 @@ a {
   width: 11px;
   height: 3px;
   background-color: #d0d0d0;
-  top: 25%;
-  left: 90%;
+  top: 15px;
+  right: 0;
+  transform: translateX(-50%);
 }
 
 .appointment-quantity-up:after {
-  transform: rotate(90deg);
+  transform: translateX(-50%) rotate(90deg);
 }
 
 .appointment-item input {
@@ -409,9 +450,11 @@ a {
 
 .button-search {
   display: inline-block;
+  vertical-align: middle;
   background-color: rgb(129, 179, 210);
   color: #ffffff;
-  font: inherit;
+  font-size: 21px;
+  font-weight: bold;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
@@ -464,6 +507,9 @@ fieldset {
 }
 
 .checkbox-hotels {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: lighter;
   margin-left: -75px;
 }
 
@@ -481,23 +527,21 @@ fieldset {
 }
 
 .checkbox+label:before {
-  content: '';
+  content: "";
   position: absolute;
   background: transparent;
   background-image: url("../img/svg-sedona/checkbox-off.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: -4px;
   left: 0;
   width: 21px;
   height: 21px;
 }
 
 .checkbox+label:after {
-  content: '';
+  content: "";
   position: absolute;
-  top: -4px;
   left: 0;
   width: 24px;
   height: 21px;
@@ -542,6 +586,7 @@ fieldset {
 
 .price-controls label {
   display: inline-block;
+  vertical-align: middle;
   font-size: 14px;
   line-height: 38px;
   vertical-align: top;
@@ -550,6 +595,8 @@ fieldset {
 
 .price-controls .min-price,
 .price-controls .max-price {
+  font-size: 14px;
+  font-weight: lighter;
   width: 90px;
   padding-left: 65px;
 }
@@ -595,6 +642,7 @@ fieldset {
   background: #1c4f80;
   width: 6px;
   height: 6px;
+  background: #ababab;
 }
 
 .range-toggle-min {
@@ -637,18 +685,15 @@ fieldset {
   line-height: 26px;
 }
 
-/* .button-filter,
-.button-sort {
-  display: flex;
-  border: 1px solid black;
-} */
 .button-filter {
   flex-grow: 1;
   margin-left: 75px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: lighter;
 }
 
 .button-filter a {
-  color: #000000;
   margin-right: 32px;
   text-decoration: none;
 }
@@ -657,10 +702,12 @@ fieldset {
   margin-left: 40px;
 }
 
+.hover,
 .button-filter a:hover {
   color: rgb(129, 179, 210);
 }
 
+.focus,
 .button-filter a:focus {
   color: #f1f1f1;
   border-bottom: 1px dotted rgb(129, 179, 210);
@@ -728,10 +775,11 @@ fieldset {
   color: #f1f1f1;
 }
 
-.hotel-item-type b,
+.hotel-item-type,
 .card-rating-rank {
   font-size: 14px;
   line-height: 21px;
+  font-weight: lighter;
   color: rgb(51, 51, 51);
 }
 
