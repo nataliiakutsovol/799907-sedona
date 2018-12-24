@@ -386,7 +386,7 @@ a {
   z-index: 3;
 }
 
-.input, .button {
+.iframe, .input, .button {
   border: none;
   background-image: none;
   background-color: transparent;
