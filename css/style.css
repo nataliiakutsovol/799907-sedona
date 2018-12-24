@@ -504,31 +504,22 @@ a {
   margin-right: 40px;
 }
 
-.appointment-quantity-down {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 3px;
-  top: 15px;
-  left: 50%;
+.appointment-quantity-down,
+.appointment-quantity-up {
+  position: relative;
+  width: 36px;
+  height: 36px;
 }
 .appointment-quantity-down:before {
   content: "";
   position: absolute;
   width: 12px;
   height: 3px;
-  top: 0;
-  left: 0;
+  top: 15px;
+  left: 50%;
   background-color: #d0d0d0;
 }
 
-.appointment-quantity-up {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    top: 15px;
-    right: 0;
-}
 .appointment-quantity-up:before,
 .appointment-quantity-up:after {
   content: "";
@@ -536,8 +527,8 @@ a {
   width: 11px;
   height: 3px;
   background-color: #d0d0d0;
-  top: 0;
-  right: 0;
+  top: 15px;
+  right: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -613,8 +604,9 @@ a {
   margin-left: -185px;
 }
 
-.filter-range legend {
+.filter-range-title {
   margin: 0;
+  margin-right: -75px;
 }
 
 fieldset {
