@@ -417,7 +417,6 @@ a {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 30px;
   padding: 10px;
   padding-right: 0;
   background-color: #f1f1f1;
@@ -425,6 +424,7 @@ a {
 
 .appointment-items {
   position: relative;
+  margin-bottom: 30px;
 }
 
 .appointment-items input {
@@ -471,7 +471,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 53px;
 }
 
 .appointment input {
@@ -508,7 +508,7 @@ a {
   height: 36px;
   background-color: #f1f1f1;
 }
- 
+
 .appointment-quantity-down:before {
   content: "";
   position: absolute;
@@ -540,6 +540,20 @@ a {
           transform: translateX(-50%) rotate(90deg);
 }
 
+.appointment-quantity-up:hover:before,
+.appointment-quantity-up:hover:after,
+.appointment-quantity-down:hover:before {
+  content: '';
+  background-color: #000000;
+}
+
+.appointment-quantity-up:focus:before,
+.appointment-quantity-up:focus:after,
+.appointment-quantity-down:focus:before {
+  content: '';
+  background-color: rgb(129, 179, 210);
+}
+
 .button-search {
   display: inline-block;
   vertical-align: middle;
@@ -553,7 +567,7 @@ a {
   text-transform: uppercase;
   border: none;
   width: 457px;
-  padding: 17px 0;
+  padding: 18px 0;
   margin: 0;
 }
 
@@ -857,15 +871,12 @@ fieldset {
   cursor: pointer;
 }
 
-.appointment-quantity-up:hover,
-.appointment-quantity-down:hover,
 .appointment-date-button:hover,
 .button-sort-up:hover,
 .button-sort-down:hover {
   opacity: 1;
 }
 
-.hover path,
 .social-button:active path,
 .appointment-date-button:active path,
 .copyright-button:hover path,
@@ -880,11 +891,12 @@ fieldset {
   list-style: none;
   text-transform: uppercase;
   margin: 0;
+  padding-left: 0;
 }
 
 .hotel-list figure {
   margin: 0;
-  padding: 0 30px 25px;
+  padding: 0 30px 25px 70px;
 }
 
 .hotel-item {
@@ -1031,11 +1043,11 @@ fieldset {
   color: #000000;
   background-color: #ffffff;
   text-transform: uppercase;
-  margin: 30px 25px 0 35px;
+  margin: 30px 7px 0 35px;
 }
 
 .footer-slogan {
-  padding-right: 60px;
+  padding-right: 68px;
 }
 
 .footer-social {
@@ -1048,6 +1060,7 @@ fieldset {
   flex-wrap: wrap;
   margin: 0;
   padding-top: 10px;
+  padding-right: 32px;
   padding-left: 0;
   list-style: none;
 }
@@ -1083,6 +1096,12 @@ fieldset {
   list-style: none;
 }
 
+.footer-copyright b {
+  font-size: 14px;
+  font-weight: 500;
+  /* line-height: 16px; */
+  padding-right: 7px;
+}
 .copyright-button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
