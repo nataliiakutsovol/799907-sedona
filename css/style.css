@@ -369,7 +369,7 @@ a {
 
 .modal-show {
   display: flex;
-  animation: bounce 0.1s;
+  animation: bounce 0.15s;
 }
 
 .modal-close {
