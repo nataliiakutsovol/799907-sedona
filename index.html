@@ -6,7 +6,6 @@
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -52,12 +51,12 @@
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </div>
           <div class="feature-food">
-              <h3>Еда</h3>
-              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <h3>Еда</h3>
+            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </div>
           <div class="feature-souvenirs">
-              <h3>Сувениры</h3>
-              <p>Не только китайского, но и местного производства!</p>
+            <h3>Сувениры</h3>
+            <p>Не только китайского, но и местного производства!</p>
           </div>
         </article>
         <article class="feature">
@@ -92,7 +91,7 @@
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложение гостиниц в Седоне</p>
         <a href="form.html" class="button-search-hotel">Поиск гостиницы в Седоне</a>
-        <form class="modal appointment-form form" method="post" action="https://echo.htmlacademy.ru">
+        <form class="modal appointment-form" method="post" action="https://echo.htmlacademy.ru">
           <div class="appointment-items">
             <label for="appointment-date-in">Дата заезда:</label>
             <input class="input" id="appointment-date-in" type="text" name="date" value="" placeholder="24 апреля 2017">
@@ -131,7 +130,7 @@
         </form>
       </section>
       <section>
-        <iframe class="iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad674c4cfaf1329c9983168c10f88d07866010ee8697fd5e52167852681f2918b&amp;source=constructor" width="1200" height="466" allowfullscreen>
+        <iframe class="iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad674c4cfaf1329c9983168c10f88d07866010ee8697fd5e52167852681f2918b&amp;source=constructor" width="1200" height="476" allowfullscreen>
         </iframe>
       </section>
     </main>
@@ -145,7 +144,7 @@
           </a></li>
         <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
-              <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
+              <path fill="#FFF" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" />
             </svg>
           </a></li>
         <li><a class="social-button" href="#"><span class="visually-hidden">Ютуб</span>
@@ -166,35 +165,6 @@
       </p>
     </footer>
   </div>
-  <script>
-    var button = document.querySelector(".button-search-hotel");
-    var popup = document.querySelector(".appointment-form");
-    var form = popup.querySelector("form");
-    var date = popup.querySelector("[name=date]");
-    var number = popup.querySelector("[name=number]");
-    button.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-    });
-    //     popup.addEventListener("click", function(event) {
-    //     if (event.target.closest(".appointment-form")) return;
-    //     popup.classList.remove("modal-show");
-    // });
-    form.addEventListener("submit", function(evt) {
-      if (!date.value || !number.value) {
-        evt.preventDefault();
-        console.log("Введите дату и количество проживающих");
-      }
-    });
-    window.addEventListener("keydown", function(evt) {
-      if (evt.keyCode === 27) {
-        evt.preventDefault();
-        if (popup.classList.contains("modal-show")) {
-          popup.classList.remove("modal-show");
-        }
-      }
-    });
-  </script>
+  <script src="js/script.js"></script>
 </body>
-
 </html>
