@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,14 +13,14 @@
   <div class="container">
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo">
+        <a class="main-header-logo" tabindex="3">
           <img src="img/svg-sedona/logo-sedona.svg" width="135" height="70" alt="Логотип сайта «Седона»">
         </a>
         <ul class="site-navigation">
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="photo.html">Фото и видео</a></li>
-          <li><a href="map.html">Карта штата</a></li>
-          <li><a href="catalog.html">Гостиницы</a></li>
+          <li><a href="info.html" tabindex="1">Информация</a></li>
+          <li><a href="photo.html" tabindex="2">Фото и видео</a></li>
+          <li><a href="map.html" tabindex="4">Карта штата</a></li>
+          <li><a href="catalog.html" tabindex="5">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -32,7 +33,7 @@
       </section>
       <section class="features">
         <div class="feature-text-promo">
-          <h3>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h3>
+          <h3>Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!<p>
         </div>
         <article class="feature">
@@ -71,17 +72,17 @@
         </article>
         <article class="features-other">
           <div class="feature-square">
-            <h3>Небольшая<br> площадь</h3>
+            <h3>Небольшая площадь</h3>
             <span>— №3 —</span>
             <p>Все достопримечательности находятся очень близко</p>
           </div>
           <div class="feature-road">
-            <h3>Красивая<br> дорога</h3>
+            <h3>Красивая дорога</h3>
             <span>— №4 —</span>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно</p>
           </div>
           <div class="feature-tourists">
-            <h3>Мало<br> туристов</h3>
+            <h3>Мало туристов</h3>
             <span>— №5 —</span>
             <p>Большbнство едет в Гранд Каньон и толпится там</p>
           </div>
@@ -165,6 +166,6 @@
       </p>
     </footer>
   </div>
-  <script src="js/script.js"></script>
+  <script src="js/script-minimalized.js"></script>
 </body>
 </html>

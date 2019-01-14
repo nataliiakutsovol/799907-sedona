@@ -40,7 +40,7 @@ body {
 
 .main-navigation {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
   text-align: center;
@@ -87,19 +87,23 @@ a {
 }
 
 .site-navigation a:focus {
-  color: rgb(0, 0, 0);
+  color: #f1f1f1;
 }
 
 .site-navigation a:active {
   color: rgb(0, 0, 0);
 }
 
+.site-navigation-current a {
+  color: rgb(118,99,87);
+}
+
 .promo {
-  background-image: url("../img/background-photo.jpg");
+  background-image: url("../img/background-photo1.jpg");
   background-color: #F0F8FF;
   background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   padding-top: 76px;
   padding-bottom: 87px;
   position: relative;
@@ -114,6 +118,7 @@ a {
 .feature-text-promo {
   background-color: #ffffff;
   text-transform: uppercase;
+  padding: 0 350px;
 }
 
 .feature-text-promo p {
@@ -127,7 +132,7 @@ a {
   position: relative;
   font-size: 21px;
   line-height: 26px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
@@ -151,7 +156,7 @@ a {
 .features span {
   font-size: 14px;
   line-height: 26px;
-  font-weight: 500;
+  font-weight: 400;
   color: #604e43;
   text-align: center;
   text-transform: uppercase;
@@ -178,13 +183,13 @@ a {
 
 .feature p {
   font-size: 14px;
-  line-height: 23px;
-  font-weight: 500;
-  letter-spacing: 0.21px;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
   color: #ffffff;
   text-align: center;
   margin: 0;
-  padding: 18px 55px 0 55px;
+  padding: 20px 55px 0 55px;
 }
 
 .bridge p {
@@ -201,7 +206,7 @@ a {
 
 .features-other h3 {
   margin: 0;
-  padding-bottom: 10px;
+  padding: 0 120px 10px 120px;
 }
 
 .feature-more,
@@ -226,12 +231,12 @@ a {
 .feature-road,
 .feature-tourists {
   width: 32.33333%;
-  padding-right: 15px;
+  padding-right: 14px;
 }
 
 .feature-more h3 {
   position: relative;
-  padding-top: 75px;
+  padding-top: 77px;
   padding-bottom: 20px;
 }
 
@@ -271,7 +276,7 @@ a {
   background-image: url("../img/svg-sedona/icon-2.svg");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 72px 70px;
+  background-size: 72px 72px;
 }
 
 .features-other {
@@ -289,9 +294,9 @@ a {
 
 .features-other h3 {
   margin: 0;
-  padding-top: 0;
   line-height: 21px;
-  padding-bottom: 20px;
+  letter-spacing: 0.3px;
+  padding-bottom: 22px;
 }
 
 .features-other p {
@@ -301,14 +306,19 @@ a {
 }
 
 .feature-road {
-  padding-left: 10px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+.feature-tourists p {
+  padding: 20px 60px;
 }
 
 .order {
   position: relative;
   font-size: 14px;
   line-height: 26px;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   text-align: center;
 }
@@ -316,15 +326,15 @@ a {
 .order h2 {
   margin: 0;
   font-size: 30px;
-  line-height: 32px;
-  font-weight: bold;
-  padding-top: 52px;
-  padding-bottom: 25px;
+  line-height: 36px;
+  font-weight: 700;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 
 .order p {
   margin: 0;
-  line-height: 25px;
+  line-height: 26px;
   padding-bottom: 45px;
 }
 
@@ -337,7 +347,7 @@ a {
   color: #ffffff;
   font-size: 21px;
   line-height: 26px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
@@ -392,7 +402,7 @@ a {
   transform: translateX(-50%);
   box-sizing: border-box;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   color: #000000;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 10px #708090;
@@ -417,15 +427,40 @@ a {
   -webkit-appearance: none;
 }
 
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .appointment-items input,
 .appointment input {
   margin: 0;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
+  line-height: 21px;
   text-transform: uppercase;
-  padding: 10px;
+  padding: 7px 10px;
   padding-right: 0;
   background-color: #f1f1f1;
+}
+
+::-webkit-input-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #000000;
+  opacity: 1;
 }
 
 .appointment-items {
@@ -435,7 +470,6 @@ a {
 
 .appointment-items input {
   width: 345px;
-  padding: 10px;
   margin-left: -8px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -565,7 +599,7 @@ a {
   color: #ffffff;
   font-size: 19px;
   line-height: 21px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
@@ -613,15 +647,18 @@ a {
 }
 
 .filter li:last-child {
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
 .filter legend {
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
+  letter-spacing: 0.3;
   line-height: 21px;
-  margin-left: -75px;
+  margin-left: -80px;
+  margin-bottom: 2px;
+  color: #ffffff;
 }
 
 .hotel-title legend {
@@ -630,7 +667,7 @@ a {
 
 .filter-range-title {
   margin: 0;
-  padding-left: 70px;
+  padding-left: 80px;
 }
 
 fieldset {
@@ -641,11 +678,11 @@ fieldset {
 .checkbox-hotels {
   font-size: 14px;
   line-height: 21px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .checkbox-benefits {
-  margin-left: -110px;
+  margin-left: -118px;
 }
 
 .checkbox-hotels {
@@ -674,8 +711,8 @@ fieldset {
   background-repeat: no-repeat;
   background-size: 100%;
   left: 0;
-  width: 21px;
-  height: 21px;
+  width: 22px;
+  height: 22px;
 }
 
 .checkbox+label:after {
@@ -706,8 +743,8 @@ fieldset {
 .filter-range {
   width: 320px;
   text-transform: uppercase;
-  margin-right: -75px;
-  margin-top: -5px;
+  margin-right: -80px;
+  margin-top: -10px;
 }
 
 .price-controls {
@@ -738,14 +775,13 @@ fieldset {
   vertical-align: middle;
   font-size: 14px;
   line-height: 34px;
-  vertical-align: top;
   cursor: pointer;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   width: 80px;
   padding-left: 66px;
 }
@@ -754,7 +790,7 @@ fieldset {
   width: 35px;
   margin: 0;
   color: inherit;
-  font: inherit;
+  font-size: 14px;
   background: none;
   border: none;
 }
@@ -806,6 +842,7 @@ fieldset {
 .btn-transparent {
   display: block;
   margin: 0 auto;
+  margin-right: 100px;
   padding: 6px 30px;
   font-size: 14px;
   line-height: 20px;
@@ -847,7 +884,7 @@ fieldset {
   flex-grow: 1;
   font-size: 12px;
   line-height: 18px;
-  font-weight: 500;
+  font-weight: 400;
   margin-left: 50px;
   margin-top: 20px;
 }
@@ -901,9 +938,9 @@ fieldset {
 .social-button:active path,
 .appointment-date-button:active path,
 .copyright-button:hover path,
-.button-sort-up:focus path,
+.button-sort-up:visited path,
 .button-sort-up:active path,
-.button-sort-down:focus path,
+.button-sort-down:visited path,
 .button-sort-down:active path {
   fill: rgb(129, 179, 210);
 }
@@ -912,7 +949,7 @@ fieldset {
   list-style: none;
   text-transform: uppercase;
   margin: 0;
-  padding-left: 0;
+  padding-left: 1px;
 }
 
 .hotel-list figure {
@@ -929,21 +966,21 @@ fieldset {
 }
 
 .hotel-item-card {
-  width: 780px;
+  width: 782px;
 }
 
 .hotel-item-card h3 {
   letter-spacing: 0.3px;
   margin: 0;
   margin-top: -5px;
-  padding-bottom: 7px;
+  padding-bottom: 5px;
 }
 
 .footer-slogan,
 .hotel-item-card a {
   font-size: 21px;
   line-height: 26px;
-  font-weight: bold;
+  font-weight: 700;
   color: #000000;
 }
 
@@ -960,7 +997,7 @@ fieldset {
 .card-rating-rank {
   font-size: 14px;
   line-height: 21px;
-  font-weight: 500;
+  font-weight: 400;
   color: rgb(51, 51, 51);
 }
 
@@ -976,29 +1013,34 @@ fieldset {
   box-sizing: border-box;
   font-size: 14px;
   line-height: 21px;
+  margin-top: 5px;
 }
 
 .hotel-item-buttons a {
   font-size: 14px;
   line-height: 21px;
-  font-weight: bold;
+  font-weight: 700;
   color: #ffffff;
 }
 
 .button-book {
   background-color: #756357;
-  padding: 5px 17px;
+  padding: 4px 17px;
 }
 
 .button-more {
-  margin-right: 5px;
-  padding: 5px 17px;
+  margin-right: 6px;
+  padding: 4px 17px;
   background-color: rgb(129, 179, 210);
 }
 
-.button-search:hover,
-.social-button:hover,
 .hotel-item-button-more a:hover {
+  background-color: #669dc0;
+  color: #ffffff;
+}
+
+.button-search:hover,
+.social-button:hover {
   background-color: #669dc0;
   color: #ffffff;
 }
@@ -1027,7 +1069,10 @@ fieldset {
 }
 
 .card-rating-rank {
-  padding: 5px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3px 13px;
   margin-right: 70px;
   margin-bottom: 10px;
   background-color: #f1f1f1;
@@ -1052,7 +1097,7 @@ fieldset {
   width: 16px;
   height: 16px;
   margin-top: 0;
-  margin-left: 10px;
+  margin-left: 7px;
 }
 
 .main-footer {
@@ -1115,14 +1160,14 @@ fieldset {
   -ms-flex-align: center;
   align-items: center;
   width: 32.33333%;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
   list-style: none;
 }
 
 .footer-copyright b {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   padding-left: 25px;
 }
 
