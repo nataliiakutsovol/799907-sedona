@@ -36,6 +36,7 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .main-navigation {
@@ -95,7 +96,7 @@ a {
 }
 
 .site-navigation-current a {
-  color: rgb(118,99,87);
+  color: rgb(118, 99, 87);
 }
 
 .promo {
@@ -662,10 +663,12 @@ input[type='number'] {
 }
 
 .hotel-title legend {
-  margin-left: -185px;
+  margin-left: -180px;
+  width: 150px;
 }
 
 .filter-range-title {
+  width: 320px;
   margin: 0;
   padding-left: 80px;
 }
@@ -842,8 +845,8 @@ fieldset {
 .btn-transparent {
   display: block;
   margin: 0 auto;
-  margin-right: 100px;
-  padding: 6px 30px;
+  margin-right: 99px;
+  padding: 6px 33px;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -872,6 +875,8 @@ fieldset {
 }
 
 .button-filter-sort h3 {
+  flex-wrap: nowrap;
+  width: 117px;
   font-size: 21px;
   line-height: 26px;
   margin: 0;
@@ -905,13 +910,13 @@ fieldset {
   border-bottom: 1px dotted rgb(129, 179, 210);
 }
 
-.button-filter a:active {
-  color: #000000;
+.button-filter a:focus {
+  color: rgb(129, 179, 210);
   border-bottom: none;
 }
 
-.button-filter a:focus {
-  color: rgb(129, 179, 210);
+.button-filter a:active {
+  color: #000000;
   border-bottom: none;
 }
 
@@ -938,9 +943,9 @@ fieldset {
 .social-button:active path,
 .appointment-date-button:active path,
 .copyright-button:hover path,
-.button-sort-up:visited path,
+.button-sort-up:focus path,
 .button-sort-up:active path,
-.button-sort-down:visited path,
+.button-sort-down:focus path,
 .button-sort-down:active path {
   fill: rgb(129, 179, 210);
 }
@@ -962,6 +967,7 @@ fieldset {
   display: -ms-flexbox;
   display: flex;
   padding-top: 30px;
+  padding-bottom: 1px;
   border-bottom: 2px solid #f1f1f1;
 }
 
@@ -1025,12 +1031,12 @@ fieldset {
 
 .button-book {
   background-color: #756357;
-  padding: 4px 17px;
+  padding: 5px 17px;
 }
 
 .button-more {
   margin-right: 6px;
-  padding: 4px 17px;
+  padding: 5px 17px;
   background-color: rgb(129, 179, 210);
 }
 
@@ -1127,7 +1133,7 @@ fieldset {
   flex-wrap: wrap;
   width: 32.33333%;
   margin: 0;
-  padding-top: 10px;
+  padding-top: 12px;
   padding-right: 120px;
   padding-left: 0;
   list-style: none;
